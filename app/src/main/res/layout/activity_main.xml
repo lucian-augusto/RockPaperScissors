@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/computerChoiceText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="Computer's Choice:"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/computerChoiceImg"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="@+id/computerChoiceText"
+        app:layout_constraintTop_toBottomOf="@+id/computerChoiceText"
+        app:srcCompat="@drawable/padrao" />
+
+    <TextView
+        android:id="@+id/textResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:gravity="center"
+        android:text="Pick one of the options below:"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/computerChoiceImg" />
+
+    <ImageButton
+        android:id="@+id/rockButton"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="42dp"
+        android:layout_marginLeft="42dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="#00FFFFFF"
+        android:onClick="selectRock"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toStartOf="@+id/paperButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textResult"
+        app:srcCompat="@drawable/pedra" />
+
+    <ImageButton
+        android:id="@+id/paperButton"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="158dp"
+        android:layout_marginLeft="158dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="158dp"
+        android:layout_marginRight="158dp"
+        android:background="#00FFFFFF"
+        android:onClick="selectPaper"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textResult"
+        app:srcCompat="@drawable/papel" />
+
+    <ImageButton
+        android:id="@+id/scissorsButton"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginRight="42dp"
+        android:background="#00FFFFFF"
+        android:onClick="selectScissors"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/paperButton"
+        app:layout_constraintTop_toBottomOf="@+id/textResult"
+        app:srcCompat="@drawable/tesoura" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
